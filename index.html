@@ -1,0 +1,272 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <style>
+        body {
+            width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #head {
+            background-color: grey;
+            height: 30vh;
+            width: 100%;
+            padding-top: 20px
+        }
+
+        img {
+
+            border: 5px dotted rgb(255, 174, 66);
+            border-radius: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 8em;
+            width: 10em;
+        }
+
+        #head {
+
+            text-align: center;
+        }
+
+        .heading {
+            color: rgb(90, 84, 84);
+            font-size: 30px;
+
+        }
+
+        #name {
+            display: inline-block;
+            font-size: 2.5em;
+            margin-top: -6px;
+            border-radius: 3%;
+            background-color: rgb(255, 174, 66);
+            padding:0 10px;
+        }
+
+        #whitestrip {
+            margin-top: -4%;
+            background-color: rgba(255, 255, 255, 0.774);
+            height: 4vh;
+        }
+
+        #element {
+            line-height: 1px;
+
+            margin-left: 20px;
+        }
+
+        #profile {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            margin-top: 10%;
+        }
+
+        #right {
+            padding: 0 5%;
+        }
+
+        #left {
+            padding: 0 5%;
+            border-right: 2px solid black;
+        }
+
+        .fa {
+            border: 5px dotted rgb(199, 166, 122);
+            background-color: rgb(255, 174, 66);
+            color: rgb(90, 84, 84);
+            border-radius: 50%;
+        }
+
+        input[type=range] {
+            border-radius:10px;
+            overflow: hidden;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-appearance: none;
+            height: 10px;
+            background-color: white
+        }
+
+        input[type='range']::-webkit-slider-runnable-track {
+            height: 10px;
+            -webkit-appearance: none;
+            background-image: linear-gradient(to right, rgb(255, 173, 66), rgb(235, 235, 143));
+            margin-top: -1px;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            width: 10px;
+            -webkit-appearance: none;
+            height: 10px;
+            border-radius: 100%;
+            background: #fff;
+            box-shadow: -80px 0 0 80px rgb(255, 174, 66);
+        }
+    </style>
+    <div>
+        <div id=head>
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAQEBANEBAVEBINDQ0KDRsIEA4NIB0iIiAdHx8kKDQsJCYxJx8fLTItMSw3MDAwIys9ODMuQDQuLy4BCgoKDg0OFQ8OFi4ZFhk3KysrNzcrKzIrNzcrKzctKy0tNzgrKzctLSsrLSsrKysrKysrKystLSsrKysrKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAIEBQYBBwj/xAA6EAACAgECAwYDBQgCAgMAAAABAgADEQQhBRIxBiJBUWFxEzKBB5GxwfAUI0JSYqHR4RXxFnIkU2P/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQMCBAX/xAAjEQACAgICAwADAQEAAAAAAAAAAQIRAyESMRNBURQiMmEE/9oADAMBAAIRAxEAPwB9a7D2hVScpXYe0OqyxEaqwqrOqkKqQAaqQqpHqkKqRgMVIZUjlWFVICGqkKqR6pCKkAGKkeEhQk6RiAAwkXLMnx/t9ptOzV1/vrAcHlPKinyzMfxT7R9VYMVCukfzKPiNj6xWapnrmBOETwV+1etO51F3XO1hXeGp7ba5NxqLCP8A9MWfiIrHxPcysGyTB9lO35sdatVyjmOFuXuAN/UPznoQGYzJFZIFkk5lgGSMRCdIFkk50gHSMCE6QTLJbrAssQ6I5E5CkRQCgVK7D2hlWNpGw9odVmRiVYVVnVWFRYwEqQypOosMqwENVYZEiVYZFgFCVIRUjlWFCwCgfLPN/tH7YcgbSadiHPdusXulB5Cart7xhtJpGZDix2+FWeuCfH7p4Jq7GdiSSxJySd8mJs0kNL+UEXP6E0HBezD34Z8qnl0Jmrp7JUIuy5P9W8jLKkdEcMpbPMxWx8DGPU2+x/3PWx2cp/lA+nhG/wDjtA/gB9xMedFPxmeUU3FZ7J9mfaMX0/s9jZtT5A3Vq/8AUotd2XpYHu4Pmu28yqpZw/UqQTseZD05l8pWGRMjkxOJ9AlYFkneF6lbqa7VOVdA4PpiHdJUgQnSR3ST3WR3WAECxYFlk2xZHdYARHWKFZZ2AwFK7D2khVg6RsPaSEEQDkWHRYxFh0EBDlWFVZxBDKsAEqwyLOKIZFgB1VhAs6qwgEAPIPtf4gWvq04OyJzsP6j/AKH95m+yfClsfncZA+Uesm/aVk8Svyf5APblEmdk6GC5xt4H0ksj0XwxtmlRQNgAP7SVVXItlyJjnYD0nBx7TDY2L985GmzvUkixKQNiQtGvrcd0gx11qDcke8wUKu9TMz2u0HxKC4HfQ84/9fGay7VVH+NfvlbbyvkAhgRggb7S2PTI5aao0P2Zag2cOqB6oXqPtnP5zUssyX2VUFdJaN8DU2AZ22wJsis7DzH2RHWAdZNdZHsWMRBsWAdZNsWR3WAyG6xQrrFACLSNh7SQggqRsPaSEEBBFEMgjFEKoiGFQQyiCUQyRgEUQqiDSGURAEUQgjFkPj+rejS321gF0rZ0DbjmgOrdHjPb+pjxTU5BPeTAxnI5RiTf+VWilUqAe0Afu2bkwPEkx/E0OrK3W8y2uKzYoPIrr4SdZwqp9goUf0DlyZzymmdUMclooNdragSbWLE9FznMqNXqaG3QDb5sd7H3j85t9T2ZUjmUoGP84BlY3Za45B+GFPVseEypxNPHIqeF6t1wa8ncDHQGTeI8SuOVsHIAPA9Ze8B7NAWIScopzsdmaH7V8AFjhlOMryEeBPh+cTlHkUUJqBgaLFdjkkjzDb/dmW3DGUOpSzIJ5SGz18jIdvZ41v3qGyPFBzqRJ3D+AHOWV+Q45lbbaUtEOMkelfZ4yHSvykEjU3h+Xwbm/wAYmmIlF2KNC0GmrPMjc9q4xhm/6l+wl10cz09kdxI7iSXgLBARFsEA4kl4B4wIziKOcRQGRKOg9pJQQFHQe0kJFYgqiFQQawyQsAiwqiDWFWABEhkglhkgARYHidHxKLU/mrdR474h1hBBjTp2eN8Q+ILgzN+7A5EXoM/oS0r1KjGcec72y0SpawDYAsyqE77jP3SkuJJX02M5GtUd6lbs0o4wo8vrKzUcYFjgcua1ObOXbmEy3G9RYnKBkA7ZEl8M4rRWvKWyx25V77ZmFj1ZR5d0arTdstIGFaAjG2GXkWSdT2h0zkKXUE9BmYfVjTXNzDnQ9c8ucRtWlqBH70MRvixeXePgh+SXtG4q1dbd0n2PmIrmTGxzMNxPVtWVZCPXB5gwlnoNczqG3GR4zPBoPJF6PSuxmlVKXcdbLXZj6DYfh/eXrSo7HZ/Y6yfFrD9OYy3YTtj0ebLbYF4CwSQ8A8Zki2CAYSRZAPAADiKdeKAESnoPaSEkenoPaSEiAKsMpgVhkgAZIRYJIVYwCrCpArCrEAdTCLBLCKYAUnbTQq+jvcKvxFT4i2coL4XcjPsDPJaNVvg7eWZ6r2t49XQvwSrO1o5DyYxWp2yfSeLcTJpsP8ue6fSYnGyuOVbNCK1tK5xgNky00vAtNTYLgqqwIPmvXPSY7hvHFFi5BxnvH0no2itpuQbggjznPO4nbjlGRKp11IUjl05yvLgj4W36MicX1SuDyJpRleU5T43gR6ecBrOAUMQUsZT4hXiHBq6t/iO3/u2ZnRTXwyNnZtUUnJJLZ3OBj0HhJemHMyU1jLFlrQY/iO0k8e4ilYwCDttLf7MOFm2xtY47i5rpB8bPE/QbfWWinLs5cklHo9C4dpRTVXUOioFz0yfEwrGPJgmMucgNoCwwrGAsMAAOYBoZzAMYACeKNcxQAj0nYe0kJKf/AJJVrDkNjpnG2Yavi6YyW5R4+szyQUW6mFSU1HGqmOMyUOKVjx/OHJfQLRTCrIFGvRhnMlJqU/mH3x8kBKSFWAovTIHMOo267SyJVQSykDYAsnKM4mXIajYFZ2ywKCxOAAST5CR9bxfTUoWd0GB0G5J9JgOP9tXtBpqrC1t3SzHL8v4CUinIzJpFTxzXm+6yw9GOw8l6AfdM3xRedSDvjoepU/nJ1t/l+jK60+Mq4poxGTTM7blTg/ePKT+Hcasp2BJHrCarSBx5N+JlXZQynBBkJR+loy9o1VfawgbcwJ8Ou8Vva2x15QGJ8+ky9JPlLLS6d28CB5dJNxiiynJ+y37NcJt4jqlrJOM81rdRXWOv+PrPetFpK6a0qrUIiryoq7YE8j7Jcdq4dfWrqOW1SLXG5QZGD7T11LgyhlIKsMqynIYek2uiM1sexgXMT2Dpkes7p6jYSEwcbnfG0LECsGOsjO0sW4bZv3Ruc/MJHv4fYoLFdgMk5B2i5BRXOYBzJV+ndcZVhn5dupka6pgSCpB8iMR2FAHMUY3/AH6RQsKMnxTSWVEKSHTzUcoBx5Sg1uobvByQc7eI5ZuF1Vo0bXu2CRy95Q+PpMHdm0lMZ5jgt0GZxp29mpJILpLT3unXBJO00nCrau78b4uMY/d7YlFVpMYXYkd3IPMufeafS8HY187c+PAKvOc/lMuVPQKLZsNLxLSunJTQXYDlIx8M8vn0kZkQHbTWjB/+wsCPulRwNHpuDYt5R1CjHMJe8V7VVULlsluq1DZz7+QlceSnXGwlByV8qJOl19K2VZoCdWd2JAQb7nwkDtP29rQGvS8tjdGuccyKfQeMwfH+0l2rbLEJWPlqr7qgevnKG3UZ2E7IYl2yTn6RJ4hxF7XJZifMnaQdXYQAw8ds+khM+bMEn67bybrGAT642l10TfZzIHqP4sefnCfDHh0++RaGxsfp7TlWo5H5Ce63yHyby+v66wAK9HjG/BzscfXeTBvKrivFlQFayGfpzDvKpilVbGr9DbKlDlQV5huV67S20bDGSAPpMUlpznJznJbqcy/q1p/Z+Y7tgrnpvOTJH4dmKf0g8V1Ze9mB2HcXHkJ6L9n3blaa102pJNRPLQ3Q1WHwz5GeV6c777+Pnkwltrgqw+QMCFXYKZTinGiLe7PofUPzDIS5cHdrMuuPDfEs+xyMHvzn5V3IOM+kj8F7eaLVIvOwqt2U1WjnyfQ43lxbrquUt0QAAt8PofLpOSVxeyiVos9E7MgL45skHAwOsZxSwLTYxAYBSSp2BEr9GEty1bDl6givl3geKcLd0dFuZeZcbk48PWPnofHY263m5A2FHdZOcbK0quPW2AjBBIIwzqWQiZniLFWKMzWFe6GZj/mcq4o3KELOcdCz7YkPIr0d/wCDkUeVaCvq/hODaKrEPMAq5T6xQf8AyoVQGVLGyTzseadj8v0Uf+CUlaMxZxFmrFec5ACqzYAPnK96brG+GuASCcj8pWpcMqCxzjGOmDNF2TuC2q3zk7APvgxtcVZ5q2zS9mOELSl4vVHIqUqjfNnGQQZdcE49SmKmxynbmTfD+vlNFw/S12qS1afKgDDxGJhu2/aDRaTmo0tVLXk4d1GVrP5mKEHNl1JRWy47Vdp6dJXy1EWXOMqFbnFY8zPLtXxB7WZ3LFmOWZjnJlZbqyxLEkk+JjRd6z0cWNQRy5JcmTWcnxwPIeMbWe99P7yN8WIWfr0lyVHLVw3N6yTqN0P3yuFve3JxnBzJwfuMD4DEyjTFV3lHn4H1kXW1c4zvkdPeTNEO6I61P79feOtCvZS6i69xyliBjBCjkz7yA1BXqPcek0bVDrBWUA+H1mWjdlA1RG43Hh4yUuqLUMmww2TjbYyU+mxnxB6gefnIF1PK2B0b+8w4mlIVNe3ucfSSKUw3odiOuRDV1dB5bQxrjSEx6uRuNiNsek1vZrtzdTiu39/TsGquOSB6HwmOY43+kFbkd4QlFPsE2uj6Z7N8R0uqqD6YgAfPWe46H1Em63SFgFHQnv8Ae5CB6T5w4B2ht01i21MwI6hW5A6+IM9Lp7e1uVWu67mYDu4Nm/l0nLkgl0isXfspe2+mFOstrUkjCHc+aiZxM5A3Odhvneeg6vTHUObHoNjkDmdhuR4TPa74Nd/wf2d1sC/ELZwoWYUklpFm5PuRnrLD03++KSeKVoGwqldsnfMUpGpKyTlJOrMrTS5wx8sgnriXPCVtqw+CV+b+VsSn4VqCNnJK45fPAmk7RcTWvTVJSRllwSPmEjK2+P0UVpssOIfaFcmmOmqLK5yGt6FF8h6zC/FLEsSST4nfeROYsd4dfATshBRVInKV9hwZ3ngwdiY0HaUMhWfeEDg49fxkbO/0nQ3UfUQELUeI8/xh3c4Ub7qMyPqjtkSVWu4z0CiAE1GwoEIpyP11kOslznw8JOpWbWxMGI1oRxv6QJOTEMTJtIOrq3Tp84H95Z4zImtxt6MrfTMGgQwJiOIhHG8aREAOwCAcbfrpJDwTRMCKpwT982f2a1q+qoJGSLCuDvkYMxTDBIP09pt/sqcLc5xl0VbEJOMHofxksquJXG6ez1mwatLu7UnwSQfANy438ZS8X4PZZqXucci2VfBVS4LZxLtOMuzBSmcjbkON43WawKBzJ4d0sxbBnJf+FlswvEOCVsR+9wRt3lzmcl7WiBlJIIH8PXInY45GlVCcLfZ5lXwMEFlz0yAN95RccyHCEEFV3B23np/ZjiunoXlsI5CASLF5irek8z7U60X6y+1flZzyY27vQSuOmyUtIrUhg0CDiOBnQYCu3djlO0Ba2w94RTtGIfn8Zxz4/rEZzdfvnbGGM+kAGu+RynrkD6SYWJPKOnj7SvHzrLXSVZJJjQdEqkeA/wASaBgSL8dEGSfpOPqwwyMj32m1SM9nbrPARtYgatwSfPMOsQww6SDqhkH2k1jtIVhgwQQnIB8xmDJnaG7qj0x+UaT+vWZA4xgiYRm/XWCOP1tAZF1Z3B8vwl72L4i1F5ZRnKMhXPLkZEotYg2YZ68p9jLnsCzftakKGIV8Lnk2xJz/AJZTGv2Rt37dfs7LYaS2ARjn5dzL/wD8jS/S06iwCr4jNhSeYDHrMhw3gleu1Rqs5guHchTjcHpmW3azh40uko06/Ktjcv8AFticTa19Ovh+1eiwGtpYjDqQf6g0U8u4pYVTIJBz1U8sUqk2TklF0aCjSlqwXHRcn7pgrD3j7z23U6ILp2YAY+GfptPDrTufeawLsjIdHiCUx+Z0ExXHYe8erQNvy/WKpoAFDbxgfqPqPacJ3gXOD+ukGxoNS3ez5CTDryBgdZXUtsTHJ1gmFE7Tguctv7ydZ4KOn3SPplwI5Wy366zRkm1/r3hE6iDrBxvH1nG8Yh+ofAx/qQSTCO+TGp1ie2PpHULAEDlOG35hzd0/ozjEDbEI2x28V/X4wT9YAMcwZeOeCaIEM1JypH1lr2Bb/wCWo5+QlXCvt82PWVNvysPMH74Xs3aqaiosMqGwwxnIxMT6ZSHaPT+zNq066xnsRRy2KGuYV82/WE7eaj4iVutqWVlmCmvcAjrMrxng1usvNWmAYhQ2M8gVZYcR0Fmm0GlpsADq1nMAeacLS07O23yoyvE15lx0ii4ip5MgZA6+0UvF6IZf6LL/AJG96sDU2NhP3ik8oO0xTHeKKGB9kWzqmOzFFOkwJ/lMHSYooAdsMZcZyKJmhA9BJFKzkUEIsFbAhtOvjFFKGWSWYQdlnhFFASBlsR2nOSZyKJDHXN31+o/tGu0UUH2HoG5gmIiiiGhjbxnDCBdXnpzjPjtmcimJdGlo9X7M3V6e9rWLANXygkes52y1iaj4YQ5Cli3hOxTynJ2dSm+NmVuBUAYBX16kxRRTSZztn//Z" alt="">
+            <div id=name> Benhur Immanuel B </div><br><br>
+            Door number, street number, colony, area, city pincode 123156
+            <hr>
+        </div>
+        <div id=whitestrip></div>
+        <div id=profile>
+            <div id="left">
+                <h3>
+                    <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                    <strong class=heading>Profile</strong>
+                </h3>
+                <p>Lorem ipsum dolor sit amet consect etur, adipisicing elit. Ipsam minus laboriosam atque a animi,
+                    doloremque tempora eum illo aliquam asperiores, quaerat delectus dolore eaque. Enim voluptatibus
+                    illo quisquam magnam beatae.</p>
+
+                <h3>
+                    <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                    <strong class=heading>Skills</strong>
+                </h3>
+                <div id=element>
+                    <h4 style="margin-left:20%;"><strong>Technical Skills</strong></h4>
+
+
+                    <label for="js">Javascript</label>
+                    <input id=js type="range" value=85><br>
+                    <label for="CSS">CSS</label>
+                    <input id=CSS type="range" value=92><br>
+                    <label for="HTML">HTML</label>
+                    <input id=HTML type="range" value=86><br>
+                    <label for="React">React</label>
+                    <input id=React type="range" value=79><br>
+                    <label for="Redux">Redux</label>
+                    <input id=Redux type="range" value=72><br>
+                    <label for="Mango">Mango</label>
+                    <input id=Mango type="range" value=90><br>
+                    <label for="Deployment">Deployment</label>
+                    <input id=Deployment type="range" value=85><br>
+
+
+                    <h4 style="margin-left:20%;"><strong>Additional Skills</strong></h4>
+                    <label for="ProjectManagement ">Project Management</label>
+                    <input id=ProjectManagement type="range" value=85><br>
+                    <label for="Recruitement">Recruitement</label>
+                    <input id=Recruitement type="range" value=92><br>
+                    <label for="BusinessDevelopment">Business Development</label>
+                    <input id=BusinessDevelopment type="range" value=85><br>
+                    <label for="Editing">Editing</label>
+                    <input id=Editing type="range" value=85><br>
+                    <label for="FundRaising">Fund Raising</label>
+                    <input id=FundRaising type="range" value=85><br>
+
+                </div>
+                <h3>
+                    <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+                    <strong class=heading>Work Experience </strong>
+
+                </h3>
+                <h5><strong>Event Manager</strong> <span style="margin-left:50%;">03/2014 - 02/2017 </span></h5>
+                <p style="margin-top:-20px;">C3presents, Washington DC</p>
+
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque sint fugiat dolores eius vero aperiam corrupti dolore deleniti quam doloremque
+                        nihil praeseiandae provident obcaecati impedit odit cupiditate nisi fuga?
+                        Quaerat vitae consectetur quo nulla? Autem consequuntur, rem quas accusantium quaerat aut
+                        veniam.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque sint fugiat dolores eius vero aperiam corrupti dolore deleniti quam doloremque
+                        nihil prate nisi fuga?
+                        Quaerat vitae consectetur quo nulla? Autem consequuntur, rem quas accusantium quaerat aut
+                        veniam.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque sint fugiat dolores eius vero aperiam corrupti dolore deleniti quam doloremque
+                        nihil praesen impedit odit cupiditate nisi fuga?
+                        Quaerat vitae consectetur quo nulla? Autem consequuntur, rem quas accusantium quaerat aut
+                        veniam.</li>
+                </ul>
+
+            </div>
+            <div id="right">
+                <h3>
+                    <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+                    <strong class=heading>Work Experience </strong>
+
+                </h3>
+                <h5><strong>Community Relations Manager</strong> <span style="margin-left:30%;">03/2014 - 02/2017
+                    </span></h5>
+                <p style="margin-top:-20px;">C3presents, Washington DC</p>
+
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque si odit cupiditate nisi fuga?
+                        Quaerat vitae consectetur quo nulla? Autem consequuntur, rem quas accusantium quaerat aut
+                        veniam.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque sint fugiat dolores eius vero aperiam corrupti dolore deleniti quam doloremque
+                        nihil praesecaecati impedit odit cupiditate nisi fuga?
+                        Quaerat vitae consectetur quo nulla? Autem consequuntur, rem quas accusantium quaerat aut
+                        veniam.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque sint fugiat doldolore deleniti quntium aspernatur repudiandae provident obcaecati
+                        impedit odit cupiditate nisi fuga?
+                        Quaerat vitae consectetur quo nulla? Autem consequuntur, rem quas accusantium quaerat aut
+                        veniam.</li>
+                </ul>
+
+
+                <h3>
+                    <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+                    <strong class=heading>Education</strong>
+
+                </h3>
+                <h5><strong>Engineering Immersion Program</strong> <span style="margin-left:30%;">03/2014 - 02/2017
+                    </span></h5>
+                <p style="margin-top:-20px;">C3presents, Washington DC</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                    numquam neque sint fugiat dolores eius vero aperiam corrupti dolore deleniti quam doloremque
+                    nihil praesentium aspernatur repudiandae provident obcaecati impedit odit cupiditate</p>
+                <ul>
+                    
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque sint fug vero aperiam corrupti dolore deleniti quam doloremque
+                        nihil odit cupiditate nisi fuga?
+                        Quaerat vitae consectetur quo nulla? Autem consequuntur, rem quas accusantium quaerat aut
+                        veniam.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque sint fugiat dolores eius vero aperiam corrupti dolore deleniti quam doloremque
+                        nihil podit cupiditate nisi fuga?
+                    </li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas natus alias, enim esse
+                        numquam neque sint fugiat dolores eius vero aperiam corrupti dolore deleniti quam doloremque
+                        nihil podit cupiditate nisi fuga?
+                    </li>
+                </ul>
+                <h5><strong>Engineering Immersion Program</strong> <span style="margin-left:30%;">03/2014 - 02/2017
+                    </span></h5>
+                <p style="margin-top:-20px;">C3presents, Washington DC</p>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
